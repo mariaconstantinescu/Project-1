@@ -9,7 +9,7 @@ typedef struct tnod
     struct tnod *next;
 } TNOD;
 
-int pcit_int(char text[ ], int *x)
+int pcit_int(char text[ ], int *x) //displays a string and reads an integer from the keyboard
 {
     char t[255];
     for( ; ; )
@@ -22,7 +22,9 @@ int pcit_int(char text[ ], int *x)
     }
 }
 
-int pcit_int_lim(char text[ ], int inf, int sup, int *pint)
+int pcit_int_lim(char text[ ], int inf, int sup, int *pint) // reads an integer that belongs to a given interval.
+//sup – an integer that denotes the superior limit of the same interval;
+//pint – points to integers ( its value is the address of the memory zone in which the received number is stored).
 {
     for( ; ; )
     {
@@ -35,7 +37,8 @@ int pcit_int_lim(char text[ ], int inf, int sup, int *pint)
         printf("Restart introducing\n");
     }
 }
-int incnod(TNOD *p)
+
+int incnod(TNOD *p) // loads the current node with the data about each wagon
 
 {
     char t[255];
@@ -84,7 +87,7 @@ int incnod(TNOD *p)
                     p -> dest = icod;
                     return 1;
                 }
-        TNOD *inifirst() //push fct
+TNOD *inifirst() //push function. inserts the current node before the first node of the list
         {
             extern TNOD *first, *last;
             TNOD *p;
@@ -119,7 +122,7 @@ int incnod(TNOD *p)
         {
             free(p);
         }
-        void erase_first_node() //popfct
+        void erase_first_node() //pop function that deletes the first node from the list.
         {
             extern TNOD *first, *last;
             TNOD *p;
