@@ -1,5 +1,5 @@
 # Project-1
-Data Structures and Algorithms
+
 In a train station, there is a train carrying goods. Its wagons are inventoried on a list, in their order.
 The list contains, for each wagon, the following details:
 - wagon’s code (9 digits);
